@@ -1,0 +1,1295 @@
+/* Google Fonts Import (ensure these are correctly linked in your HTML <head>) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* Root Variables for Branding and Consistency (Your existing palette) */
+:root {
+    /* Color Palette */
+    --color-primary-dark: #1a1a1a; /* Deep Charcoal - Main background for dark sections */
+    --color-secondary-dark: #333333; /* Rich Gray - Secondary dark elements, softer contrast */
+    --color-light: #f8f8f8; /* Crisp White / Off-white - Main background for light sections, card backgrounds */
+    --color-text-light: #ffffff; /* Text color on dark backgrounds */
+    --color-text-dark: #333333; /* Text color on light backgrounds */
+    --color-accent-gold: #b8860b; /* Metallic Gold - Primary accent color for Gabby Auto */
+    --color-accent-blue: #2c3e50; /* Deep Muted Sapphire Blue (alternative accent - currently unused for primary branding, but kept) */
+    --color-border: #e0e0e0; /* Light border for elements */
+    --color-warning: #dc3545; /* Red for warnings/errors */
+    --color-success: #28a745; /* Green for success messages */
+
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Spacing */
+    --spacing-sm: 1rem;    /* 16px */
+    --spacing-md: 2rem;    /* 32px */
+    --spacing-lg: 4rem;    /* 64px */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-light);
+    -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* No-Scroll class for mobile navigation */
+body.no-scroll {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark); /* Default heading color */
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2; /* Better readability */
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; } /* Added for more hierarchy */
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs */
+p {
+    margin-bottom: var(--spacing-sm); /* Consistent paragraph spacing */
+}
+
+/* Links */
+a {
+    color: var(--color-accent-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: var(--font-heading);
+    text-align: center; /* Ensures text is centered for block buttons */
+}
+
+.btn-primary {
+    background-color: var(--color-accent-gold);
+    color: var(--color-text-light);
+    box-shadow: 0 4px 10px rgba(184, 134, 11, 0.2); /* Subtle gold shadow */
+}
+
+.btn-primary:hover {
+    background-color: #a0750a; /* Slightly darker gold */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(184, 134, 11, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary-dark);
+    color: var(--color-text-light);
+    box-shadow: 0 4px 10px rgba(51, 51, 51, 0.2); /* Subtle dark shadow */
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(26, 26, 26, 0.3);
+}
+
+.btn-light {
+    background-color: var(--color-light);
+    color: var(--color-primary-dark);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn-light:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.btn-outline-light {
+    background: transparent;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--color-text-light);
+    color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Section Padding & Titles */
+.section-padding {
+    padding: var(--spacing-lg) 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    font-size: 2.8rem;
+    color: var(--color-primary-dark); /* Ensure main color */
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-secondary-dark); /* Use secondary dark for softer contrast */
+    margin-bottom: var(--spacing-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-light {
+    color: var(--color-text-light);
+}
+
+.bg-dark {
+    background-color: var(--color-primary-dark);
+}
+
+/* Header (Gabby Auto Branding) */
+.main-header {
+    background-color: var(--color-primary-dark); /* Deep Charcoal */
+    color: var(--color-text-light);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15); /* More visible shadow */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo a {
+    font-family: var(--font-heading);
+    font-size: 2.2rem; /* Slightly larger logo */
+    font-weight: 700;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* More prominent */
+    transition: color 0.3s ease;
+}
+
+.main-header .logo a:hover {
+    color: var(--color-accent-gold); /* Gold highlight on hover */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: var(--spacing-md);
+}
+
+.main-nav ul li a {
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: 1.05rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--color-accent-gold); /* Gold hover effect */
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent-gold); /* Gold underline */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after { /* Active link styling */
+    width: 100%;
+}
+
+/* Mobile Menu Toggle (Hamburger) */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: relative;
+    z-index: 1001; /* Above mobile nav */
+    transform-origin: center;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px; /* Slightly larger for visibility */
+    height: 3px;
+    background-color: var(--color-text-light);
+    margin: 6px 0; /* Slightly more space */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text-light);
+    /* Adjust this URL if your images are local to your project: */
+    background: url('../images/headers/hero-background.jpg') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.hero-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Slightly darker overlay for text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: var(--spacing-md);
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: var(--color-text-light);
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Subtle text shadow */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Featured Vehicles Section */
+.featured-vehicles {
+    background-color: var(--color-light);
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.vehicle-card {
+    background-color: var(--color-text-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Aligned left for details, not centered */
+    padding-bottom: var(--spacing-md);
+    display: flex; /* For flexible content inside */
+    flex-direction: column;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 220px; /* Consistent image height */
+    object-fit: cover;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.vehicle-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0; /* Override default h3 margin */
+    margin-bottom: 0.5rem;
+    color: var(--color-primary-dark);
+    padding: 0 var(--spacing-sm); /* Add padding to content */
+}
+
+.vehicle-card p {
+    color: var(--color-secondary-dark); /* Softer text color */
+    margin-bottom: 0.5rem;
+    padding: 0 var(--spacing-sm);
+}
+
+/* Add a price style for car cards */
+.car-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-accent-gold); /* Price in gold */
+    margin-top: auto; /* Pushes price and button to bottom */
+    margin-bottom: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+}
+
+.car-card .btn {
+    margin-top: var(--spacing-sm);
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+    align-self: flex-start; /* Aligns button to the left within its container */
+    margin-left: var(--spacing-sm);
+}
+
+/* Badges for New/Used condition */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm); /* Space below badge */
+    margin-left: var(--spacing-sm); /* Align with other content */
+}
+.badge.new {
+    background-color: var(--color-success); /* Green for 'New' */
+}
+.badge.used {
+    background-color: var(--color-secondary-dark); /* Grey for 'Used' */
+}
+
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--color-secondary-dark); /* Dark background for contrast */
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.testimonial-card {
+    background-color: var(--color-primary-dark); /* Even darker card background */
+    color: var(--color-text-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.testimonial-card .quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-card .author {
+    font-weight: 600;
+    color: var(--color-accent-gold);
+    font-size: 1rem;
+}
+
+
+/* Call to Action Section */
+.cta-section {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--color-text-light);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-lg);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-section .btn {
+    margin: 0 10px;
+}
+
+/* Footer (Gabby Auto Branding) */
+.main-footer {
+    background-color: var(--color-secondary-dark); /* Rich Gray */
+    color: var(--color-text-light);
+    padding: var(--spacing-lg) 0;
+    font-size: 0.9rem;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.footer-logo, .footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo h3 {
+    color: var(--color-text-light); /* White for logo in footer */
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    color: var(--color-accent-gold); /* Gold for section titles */
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--color-text-light);
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column; /* Stack title and icons */
+}
+
+.footer-social-icons { /* Added a wrapper for consistent spacing */
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* Larger hit area */
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--color-accent-gold); /* Gold hover effect */
+    transform: translateY(-3px);
+}
+
+.footer-social img {
+    width: 20px; /* Icon size */
+    height: 20px;
+    filter: invert(1); /* Ensures icons are white */
+    transition: filter 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    /* Mobile Nav Styles */
+    .main-nav {
+        display: flex; /* Override original display:none */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 70%;
+        max-width: 300px;
+        height: 100%;
+        background-color: var(--color-primary-dark);
+        padding-top: 100px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        transition: right 0.4s ease-in-out;
+        z-index: 999;
+    }
+
+    .main-nav.active {
+        right: 0; /* Slide in */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width for mobile list */
+    }
+
+    .main-nav li {
+        margin: 15px 0;
+        width: 100%; /* Full width for list items */
+        text-align: center;
+    }
+
+    .main-nav a {
+        font-size: 1.2em;
+        padding: 10px 0;
+        display: block; /* Make links block to fill li */
+    }
+    .main-nav ul li a::after {
+        left: 50%;
+        transform: translateX(-50%); /* Center the underline */
+    }
+    .main-nav ul li a:hover::after,
+    .main-nav ul li a.active::after {
+        width: 80%; /* Shorter underline for mobile */
+    }
+
+
+    .menu-toggle {
+        display: block; /* Show on mobile */
+    }
+
+    /* Hamburger to X animation */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Showroom Specifics */
+    .showroom-grid-container {
+        grid-template-columns: 1fr; /* Stack sidebar and content on smaller screens */
+    }
+
+    .filter-sidebar {
+        position: static; /* Remove sticky behavior on smaller screens */
+        margin-bottom: var(--spacing-md);
+        max-width: 400px; /* Constrain width when stacked */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* FAQ/Chatbot Specifics */
+    .faq-chatbot-grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+
+    .chatbot-section {
+        height: 500px; /* Slightly reduce height on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 1.6rem; }
+    .section-padding { padding: var(--spacing-md) 0; }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .page-title {
+        font-size: 2.8rem;
+    }
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .main-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-links, .footer-contact, .footer-social {
+        min-width: unset;
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+    .footer-links ul {
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .footer-links ul li {
+        margin-bottom: 0;
+    }
+    .footer-social-icons {
+        justify-content: center; /* Center icons on mobile */
+    }
+
+    .deposit-form-container,
+    .tracking-form-container,
+    .faq-section {
+        padding: var(--spacing-md);
+        margin: var(--spacing-md) auto;
+    }
+
+    .deposit-form-container h2,
+    .tracking-form-container h2,
+    .faq-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .deposit-form-container h3 {
+        font-size: 1.4rem;
+    }
+
+    .submit-deposit-btn {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .chatbot-section {
+        height: 450px; /* Further reduce height for very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
+    }
+    .page-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .vehicle-card img { height: 180px; }
+
+    .chatbot-section {
+        height: 400px;
+        padding: var(--spacing-sm);
+    }
+    .chat-input input[type="text"] {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+    .chat-input .btn-primary {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Page Header Section (for showroom, exotic fleet, etc.) */
+.page-header-section {
+    background-color: var(--color-primary-dark); /* Use your dark primary color */
+    color: var(--color-text-light);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    text-align: center;
+    /* Removed margin-top -1px, better to manage spacing via HTML/JS if needed */
+}
+/* You can add a specific background image for different page headers if desired */
+.showroom-header { /* Example for showroom */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../images/headers/showroom-header-bg.jpg') no-repeat center center/cover;
+}
+.exotic-fleet-header { /* Example for exotic fleet */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../images/headers/exotic-fleet-header-bg.jpg') no-repeat center center/cover;
+}
+
+
+.page-title {
+    font-size: 3.5rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Showroom Content Layout */
+.showroom-grid-container {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Slightly wider sidebar to accommodate content */
+    gap: var(--spacing-lg);
+    align-items: start; /* Align items to the top */
+}
+
+/* Filter Sidebar */
+.filter-sidebar {
+    background-color: var(--color-text-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: sticky; /* Make sidebar sticky */
+    top: calc(1rem + 60px); /* Adjust based on header height + some margin */
+    z-index: 999;
+}
+
+.filter-sidebar h3 {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary-dark);
+    border-bottom: 1px solid var(--color-border); /* Subtle line */
+    padding-bottom: var(--spacing-sm);
+}
+
+.filter-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.filter-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary-dark);
+}
+
+.filter-group select,
+.filter-group input[type="number"] {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    background-color: var(--color-light);
+    -webkit-appearance: none; /* Remove default select styling */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2C189.398c-3.6%2C3.6-7.8%2C5.4-12.6%2C5.4s-9-1.8-12.6-5.4L146.2%2C78.898L30.6%2C189.398c-3.6%2C3.6-7.8%2C5.4-12.6%2C5.4s-9-1.8-12.6-5.4C1.8%2C185.798%2C0%2C181.598%2C0%2C176.798s1.8-9%2C5.4-12.6l134.4-134.4c7.2-7.2%2C18-7.2%2C25.2%2C0l134.4%2C134.4c3.6%2C3.6%2C5.4%2C7.8%2C5.4%2C12.6S290.6%2C185.798%2C287%2C189.398z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+.filter-group select:focus,
+.filter-group input[type="number"]:focus {
+    outline: none;
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.2);
+}
+
+.filter-sidebar .btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.filter-sidebar .btn + .btn { /* For the second button (Clear Filters) */
+    margin-top: 0.8rem;
+}
+
+/* Vehicle Listings (reusing .vehicle-grid) */
+.vehicle-listings {
+    margin-top: 0.8rem; /* Adjusted for consistency */
+}
+
+.no-results-message {
+    text-align: center;
+    grid-column: 1 / -1; /* Span across all columns in the grid */
+    font-size: 1.5rem;
+    color: var(--color-secondary-dark); /* Softer color */
+    padding: var(--spacing-lg);
+    background-color: var(--color-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-top: var(--spacing-md);
+}
+
+/* Form Styles (General for Deposit, Contact, Tracking) */
+.deposit-form-container,
+.tracking-form-container {
+    background-color: var(--color-text-light);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: var(--spacing-lg) auto;
+}
+
+.deposit-form-container h2,
+.tracking-form-container h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-primary-dark);
+    font-size: 2.2rem;
+}
+
+.deposit-form-container h3 {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-secondary-dark);
+    font-size: 1.6rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    background-color: var(--color-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.2);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.payment-details {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.crypto-address-box {
+    background-color: #e9ecef; /* A light grey specific for this box */
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    word-break: break-all; /* Ensures long addresses wrap */
+}
+
+.crypto-address-box p {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary-dark);
+}
+
+.crypto-address-box strong {
+    color: var(--color-accent-gold);
+}
+
+.crypto-warning {
+    font-size: 0.9rem;
+    color: var(--color-warning); /* Red for warning */
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.submit-deposit-btn {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.message-box {
+    padding: 1rem;
+    margin-top: var(--spacing-md);
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.message-box.success {
+    background-color: #d4edda; /* Light green */
+    color: var(--color-success); /* Darker green text */
+    border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da; /* Light red */
+    color: var(--color-warning); /* Darker red text */
+    border: 1px solid #f5c6cb;
+}
+
+/* Tracking Page Specific Styles */
+.tracking-results {
+    background-color: var(--color-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-top: var(--spacing-lg);
+}
+
+.tracking-results h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+}
+
+.tracking-results h3 span {
+    color: var(--color-accent-gold);
+}
+
+.tracking-results p {
+    margin-bottom: 0.8rem;
+    color: var(--color-secondary-dark);
+}
+
+.tracking-results p strong {
+    color: var(--color-primary-dark);
+}
+
+.tracking-timeline {
+    margin-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-md);
+}
+
+.tracking-timeline h4 {
+    font-size: 1.4rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 1rem;
+}
+
+.tracking-timeline ul {
+    list-style: none;
+    padding-left: 20px; /* Space for timeline line */
+    position: relative;
+}
+
+.tracking-timeline ul::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+.tracking-timeline ul li {
+    position: relative;
+    padding: 10px 0 10px 25px;
+    margin-bottom: 10px;
+    border-left: none; /* Remove default list style */
+}
+
+.tracking-timeline ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-accent-gold);
+    border-radius: 50%;
+    border: 2px solid var(--color-text-light); /* White border for the dot */
+    z-index: 1;
+}
+
+.tracking-timeline ul li strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.2rem;
+}
+
+.tracking-timeline ul li span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+
+/* FAQ Section Styles */
+.faq-section {
+    background-color: var(--color-text-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-primary-dark);
+    font-size: 2.2rem;
+}
+
+.accordion-item {
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: var(--color-light);
+    color: var(--color-primary-dark);
+    padding: 1rem 1.5rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion-header.active {
+    background-color: var(--color-accent-gold);
+    color: var(--color-text-light);
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(45deg); /* Change + to X */
+    color: var(--color-text-light);
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--color-accent-gold);
+}
+
+.accordion-content {
+    padding: 0 1.5rem;
+    background-color: var(--color-text-light);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content.show {
+    max-height: 200px; /* Adjust based on expected content height */
+    padding: 1rem 1.5rem;
+    transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+}
+
+/* Chatbot Section Styles */
+.chatbot-section {
+    background-color: var(--color-primary-dark);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    height: 550px; /* Fixed height for the chat window */
+}
+
+.chatbot-section h2 {
+    color: var(--color-text-light);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    font-size: 2.2rem;
+}
+
+.chatbot-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-secondary-dark); /* Rich Gray for chat background */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: var(--spacing-sm);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 0.7rem 1rem;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.bot-message {
+    background-color: var(--color-light); /* Light background for bot messages */
+    color: var(--color-text-dark);
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.user-message {
+    background-color: var(--color-accent-gold); /* Gold for user messages */
+    color: var(--color-text-light);
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.typing-indicator {
+    align-self: flex-start;
+    background-color: var(--color-light);
+    color: var(--color-text-dark);
+    padding: 0.7rem 1rem;
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.chat-input {
+    display: flex;
+    padding: var(--spacing-sm);
+    background-color: var(--color-primary-dark);
+    border-top: 1px solid #444; /* Slightly lighter border */
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    border-radius: 20px;
+    background-color: #444; /* Darker input background */
+    color: var(--color-text-light);
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.chat-input input[type="text"]::placeholder {
+    color: #bbb;
+}
+
+.chat-input input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.3);
+}
+
+.chat-input .btn-primary {
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+}

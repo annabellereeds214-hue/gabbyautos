@@ -1,0 +1,343 @@
+[
+    {
+        "id": "car001",
+        "make": "Mercedes-Benz",
+        "model": "S-Class S580",
+        "year": 2024,
+        "price": 125000,
+        "type": "Sedan",
+        "condition": "New",
+        "mileage": 50,
+        "engine": "4.0L V8 Biturbo",
+        "transmission": "9-speed Automatic",
+        "fuelType": "Gasoline",
+        "color": "Obsidian Black",
+        "interiorColor": "Macchiato Beige",
+        "features": ["Burmester 3D Surround Sound", "Active Ambient Lighting", "Rear-Axle Steering"],
+        "description": "The epitome of luxury and innovation, the 2024 Mercedes-Benz S-Class S580 offers unparalleled comfort, advanced technology, and a commanding presence on the road. Perfect for those who demand the best.",
+        "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": false
+    },
+    {
+        "id": "car002",
+        "make": "Rolls-Royce",
+        "model": "Cullinan",
+        "year": 2023,
+        "price": 380000,
+        "type": "SUV",
+        "condition": "Used",
+        "mileage": 1200,
+        "engine": "6.75L Twin-Turbo V12",
+        "transmission": "8-speed Automatic",
+        "fuelType": "Gasoline",
+        "color": "Black Diamond",
+        "interiorColor": "Arctic White",
+        "features": ["Starlight Headliner", "Rear Entertainment System", "Picnic Tables"],
+        "description": "Experience ultimate luxury and commanding presence with the Rolls-Royce Cullinan. This ultra-luxury SUV redefines opulence, offering an unparalleled ride quality and bespoke craftsmanship.",
+        "image": "https://images.unsplash.com/photo-1542282088-fe842990f25b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": true
+    },
+    {
+        "id": "car003",
+        "make": "Ford",
+        "model": "F-150 Raptor R",
+        "year": 2024,
+        "price": 115000,
+        "type": "Truck",
+        "condition": "New",
+        "mileage": 75,
+        "engine": "5.2L Supercharged V8",
+        "transmission": "10-speed Automatic",
+        "fuelType": "Gasoline",
+        "color": "Code Orange",
+        "interiorColor": "Black/Orange Accents",
+        "features": ["FOX Live Valve Shocks", "37-inch Tires", "Recaro Seats"],
+        "description": "Unleash extreme off-road performance with the 2024 Ford F-150 Raptor R. Built for the toughest terrains, it combines raw power with advanced technology for an exhilarating driving experience.",
+        "image": "https://images.unsplash.com/photo-1593283347184-97060c0787e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": false
+    },
+    {
+        "id": "car004",
+        "make": "Porsche",
+        "model": "911 Turbo S",
+        "year": 2023,
+        "price": 230000,
+        "type": "Sports Car",
+        "condition": "Used",
+        "mileage": 800,
+        "engine": "3.8L Twin-Turbo Flat-6",
+        "transmission": "8-speed PDK",
+        "fuelType": "Gasoline",
+        "color": "Chalk",
+        "interiorColor": "Black Leather",
+        "features": ["Porsche Ceramic Composite Brakes", "Sport Chrono Package", "Burmester High-End Surround Sound"],
+        "description": "The 2023 Porsche 911 Turbo S is a masterpiece of engineering, blending blistering performance with everyday usability. A true icon for the discerning driver.",
+        "image": "https://images.unsplash.com/photo-1612965096206-82978721221a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": true
+    },
+    {
+        "id": "car005",
+        "make": "BMW",
+        "model": "X7 M60i",
+        "year": 2024,
+        "price": 105000,
+        "type": "SUV",
+        "condition": "New",
+        "mileage": 30,
+        "engine": "4.4L TwinPower Turbo V8",
+        "transmission": "8-speed Sport Automatic",
+        "fuelType": "Gasoline",
+        "color": "Mineral White Metallic",
+        "interiorColor": "Tartufo Extended Merino Leather",
+        "features": ["Bowers & Wilkins Diamond Surround Sound", "Executive Package", "Driving Assistance Professional Package"],
+        "description": "The 2024 BMW X7 M60i combines luxurious comfort with exhilarating performance. A spacious and powerful SUV perfect for families who refuse to compromise on driving dynamics.",
+        "image": "https://images.unsplash.com/photo-1621996000000-000000000000?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": false
+    },
+    {
+        "id": "car006",
+        "make": "Lamborghini",
+        "model": "Huracán EVO",
+        "year": 2022,
+        "price": 280000,
+        "type": "Sports Car",
+        "condition": "Used",
+        "mileage": 1500,
+        "engine": "5.2L V10",
+        "transmission": "7-speed Dual Clutch",
+        "fuelType": "Gasoline",
+        "color": "Arancio Borealis",
+        "interiorColor": "Nero Ade",
+        "features": ["LDVI (Lamborghini Dinamica Veicolo Integrata)", "Carbon Ceramic Brakes", "Lifting System"],
+        "description": "The Lamborghini Huracán EVO is a symphony of power and precision. Its iconic design and breathtaking performance make every drive an unforgettable experience.",
+        "image": "https://images.unsplash.com/photo-1583121274602-3e2820c691e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": true
+    },
+    {
+        "id": "car007",
+        "make": "Cadillac",
+        "model": "Escalade ESV",
+        "year": 2024,
+        "price": 108000,
+        "type": "SUV",
+        "condition": "New",
+        "mileage": 40,
+        "engine": "6.2L V8",
+        "transmission": "10-speed Automatic",
+        "fuelType": "Gasoline",
+        "color": "Crystal White Tricoat",
+        "interiorColor": "Jet Black",
+        "features": ["38-inch Curved OLED Display", "Super Cruise", "AKG Studio Reference Audio System"],
+        "description": "The 2024 Cadillac Escalade ESV offers unparalleled space, luxury, and technology. A commanding presence with a refined interior, perfect for executive travel or large families.",
+        "image": "https://images.unsplash.com/photo-1621996000000-000000000000?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": false
+    },
+    {
+        "id": "car008",
+        "make": "Ferrari",
+        "model": "SF90 Stradale",
+        "year": 2023,
+        "price": 550000,
+        "type": "Sports Car",
+        "condition": "Used",
+        "mileage": 500,
+        "engine": "4.0L Twin-Turbo V8 Hybrid",
+        "transmission": "8-speed Dual Clutch",
+        "fuelType": "Hybrid",
+        "color": "Rosso Corsa",
+        "interiorColor": "Nero",
+        "features": ["Plug-in Hybrid Powertrain", "Carbon Fiber Racing Seats", "Assetto Fiorano Package"],
+        "description": "The Ferrari SF90 Stradale is a groundbreaking plug-in hybrid supercar, combining electrifying performance with Ferrari's legendary racing heritage. A true collector's item.",
+        "image": "https://images.unsplash.com/photo-1617529497471-9218633199c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": true
+    },
+    {
+        "id": "car009",
+        "make": "GMC",
+        "model": "Hummer EV Pickup",
+        "year": 2024,
+        "price": 135000,
+        "type": "Truck",
+        "condition": "New",
+        "mileage": 20,
+        "engine": "Electric",
+        "transmission": "Single-speed",
+        "fuelType": "Electric",
+        "color": "Interstellar White",
+        "interiorColor": "Lunar Horizon",
+        "features": ["CrabWalk Mode", "Extract Mode", "Ultium Battery Platform"],
+        "description": "The revolutionary GMC Hummer EV Pickup redefines electric off-road capability. With immense power and innovative features, it's a truck built for the future.",
+        "image": "https://images.unsplash.com/photo-1621996000000-000000000000?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": false
+    },
+    {
+        "id": "car010",
+        "make": "Bentley",
+        "model": "Continental GT Speed",
+        "year": 2023,
+        "price": 290000,
+        "type": "Coupe",
+        "condition": "Used",
+        "mileage": 900,
+        "engine": "6.0L Twin-Turbo W12",
+        "transmission": "8-speed Dual Clutch",
+        "fuelType": "Gasoline",
+        "color": "Sequin Blue",
+        "interiorColor": "Linen/Imperial Blue",
+        "features": ["Bentley Dynamic Ride", "Carbon Ceramic Brakes", "Naim for Bentley Audio"],
+        "description": "The Bentley Continental GT Speed offers an exhilarating blend of performance and handcrafted luxury. A grand tourer designed for effortless, high-speed cruising.",
+        "image": "https://images.unsplash.com/photo-1616455579100-2ceaa4fd67e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "isExotic": true
+    }
+]
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabby Auto - Showroom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/scrollcue@2.0.0/dist/scrollcue.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section (Copied from index.html) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Gabby Auto</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="showroom.html">Showroom</a></li>
+                    <li><a href="exotic-fleet.html">Exotic Fleet</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="tracking.html">Tracking</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ & AI Support</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header Section -->
+    <section class="page-header-section">
+        <div class="container">
+            <h1 class="page-title" data-scrollcue="true" data-effect="fadeInUp">Our Assorted Collection</h1>
+            <p class="page-subtitle" data-scrollcue="true" data-effect="fadeInUp" data-delay="100">Find your perfect vehicle from our diverse inventory.</p>
+        </div>
+    </section>
+
+    <!-- Showroom Content Section -->
+    <section class="showroom-content section-padding">
+        <div class="container showroom-grid-container">
+            <div id="car-list"></div>
+            <!-- Filter Sidebar -->
+            <aside class="filter-sidebar" data-scrollcue="true" data-effect="fadeInLeft">
+                <h3>Filter Vehicles</h3>
+                <div class="filter-group">
+                    <label for="make-filter">Make:</label>
+                    <select id="make-filter">
+                        <option value="">All Makes</option>
+                        <!-- Options will be dynamically loaded by JS -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="type-filter">Type:</label>
+                    <select id="type-filter">
+                        <option value="">All Types</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Truck">Truck</option>
+                        <option value="Sports Car">Sports Car</option>
+                        <option value="Coupe">Coupe</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="min-price">Min Price ($):</label>
+                    <input type="number" id="min-price" value="100000" min="100000">
+                </div>
+                <div class="filter-group">
+                    <label for="max-price">Max Price ($):</label>
+                    <input type="number" id="max-price" value="1000000" max="1000000">
+                </div>
+                <div class="filter-group">
+                    <label for="condition-filter">Condition:</label>
+                    <select id="condition-filter">
+                        <option value="">Any</option>
+                        <option value="New">New</option>
+                        <option value="Used">Used</option>
+                    </select>
+                </div>
+                <button id="apply-filters" class="btn btn-primary">Apply Filters</button>
+                <button id="clear-filters" class="btn btn-secondary">Clear Filters</button>
+            </aside>
+
+            <!-- Vehicle Listings -->
+            <div class="vehicle-listings">
+                <div id="car-results" class="vehicle-grid">
+                    <!-- Car cards will be dynamically loaded here by JS -->
+                    <p class="no-results-message" style="display: none;">No vehicles match your criteria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (Copied from index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Gabby Auto</h3>
+                    <p>&copy; 2025 Gabby Auto. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="showroom.html">Showroom</a></li>
+                        <li><a href="exotic-fleet.html">Exotic Fleet</a></li>
+                        <li><a href="deposit.html">Make a Deposit</a></li>
+                        <li><a href="tracking.html">Track Shipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Auto Drive, Luxury City, LC 90210</p>
+                    <p>Email: info@gabbyauto.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <a href="#" aria-label="Facebook"><img src="https://via.placeholder.com/24/cccccc/ffffff?text=FB" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/24/cccccc/ffffff?text=IG" alt="Instagram"></a>
+                    <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/24/cccccc/ffffff?text=TW" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ScrollCue JS for initialization -->
+    <script src="https://unpkg.com/scrollcue@2.0.0/dist/scrollcue.min.js"></script>
+    <script>
+        scrollCue.init({
+            duration: 800,
+            interval: 50,
+            percentage: 0.75
+        });
+    </script>
+    <!-- Our custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

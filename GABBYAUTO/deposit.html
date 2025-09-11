@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabby Auto - Make a Deposit</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/scrollcue@2.0.0/dist/scrollcue.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Gabby Auto</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="showroom.html">Showroom</a></li>
+                    <li><a href="exotic-fleet.html">Exotic Fleet</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="tracking.html">Tracking</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ & AI Support</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header Section -->
+    <section class="page-header-section">
+        <div class="container">
+            <h1 class="page-title" data-scrollcue="true" data-effect="fadeInUp">Secure Your Dream Car</h1>
+            <p class="page-subtitle" data-scrollcue="true" data-effect="fadeInUp" data-delay="100">Make a deposit to reserve your chosen vehicle.</p>
+        </div>
+    </section>
+
+    <!-- Deposit Form Section -->
+    <section class="deposit-section section-padding">
+        <div class="container">
+            <div class="deposit-form-container" data-scrollcue="true" data-effect="fadeInUp">
+                <h2>Deposit Details</h2>
+                <form id="deposit-form">
+                    <div class="form-group">
+                        <label for="car-name">Vehicle:</label>
+                        <input type="text" id="car-name" name="car-name" readonly placeholder="No vehicle selected">
+                        <input type="hidden" id="car-id" name="car-id">
+                    </div>
+                    <div class="form-group">
+                        <label for="car-price">Total Price:</label>
+                        <input type="text" id="car-price" name="car-price" readonly placeholder="$0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="deposit-amount">Deposit Amount ($):</label>
+                        <input type="number" id="deposit-amount" name="deposit-amount" min="1000" step="100" value="5000" required>
+                        <small>Minimum deposit is $1,000. Recommended: 5% of total price.</small>
+                    </div>
+
+                    <h3>Your Information</h3>
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <h3>Payment Method</h3>
+                    <div class="form-group">
+                        <label for="payment-method">Choose Method:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="">Select a payment method</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bitcoin">Bitcoin (BTC)</option>
+                            <option value="ethereum">Ethereum (ETH)</option>
+                            <option value="litecoin">Litecoin (LTC)</option>
+                            <option value="cardano">Cardano (ADA)</option>
+                            <option value="solana">Solana (SOL)</option>
+                            <option value="other-crypto">Other Crypto</option>
+                        </select>
+                    </div>
+
+                    <div id="crypto-details" class="payment-details" style="display: none;">
+                        <p>Please send the exact deposit amount to the following address:</p>
+                        <div class="crypto-address-box">
+                            <p><strong>Wallet Address:</strong> <span id="wallet-address"></span></p>
+                            <p><strong>Network:</strong> <span id="crypto-network"></span></p>
+                            <button type="button" class="btn btn-secondary copy-btn" data-copy-target="#wallet-address">Copy Address</button>
+                        </div>
+                        <p class="crypto-warning"><strong>Important:</strong> Only send the selected cryptocurrency to this address. Sending other assets may result in permanent loss. Funds will be verified upon receipt.</p>
+                    </div>
+
+                    <div id="paypal-details" class="payment-details" style="display: none;">
+                        <p>You will be redirected to PayPal to complete your deposit.</p>
+                        <button type="button" class="btn btn-primary">Proceed to PayPal</button>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-deposit-btn">Make Deposit</button>
+                    <div id="deposit-message" class="message-box" style="display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Gabby Auto</h3>
+                    <p>&copy; 2025 Gabby Auto. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="showroom.html">Showroom</a></li>
+                        <li><a href="exotic-fleet.html">Exotic Fleet</a></li>
+                        <li><a href="deposit.html">Make a Deposit</a></li>
+                        <li><a href="tracking.html">Track Shipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Auto Drive, Luxury City, LC 90210</p>
+                    <p>Email: info@gabbyauto.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <a href="#" aria-label="Facebook"><img src="https://via.placeholder.com/24/cccccc/ffffff?text=FB" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/24/cccccc/ffffff?text=IG" alt="Instagram"></a>
+                    <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/24/cccccc/ffffff?text=TW" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ScrollCue JS for initialization -->
+    <script src="https://unpkg.com/scrollcue@2.0.0/dist/scrollcue.min.js"></script>
+    <script>
+        scrollCue.init({
+            duration: 800,
+            interval: 50,
+            percentage: 0.75
+        });
+    </script>
+    <!-- Our custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

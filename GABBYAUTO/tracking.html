@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabby Auto - Track Your Shipment</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Gabby Auto</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="showroom.html">Showroom</a></li>
+                    <li><a href="exotic-fleet.html">Exotic Fleet</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="tracking.html" class="active">Tracking</a></li> <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ & AI Support</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header-section">
+        <div class="container">
+            <h1 class="page-title" data-scrollcue="true" data-effect="fadeInUp">Track Your Order</h1>
+            <p class="page-subtitle" data-scrollcue="true" data-effect="fadeInUp" data-delay="100">Enter your unique tracking number to get real-time updates on your vehicle's journey to Nigeria.</p>
+        </div>
+    </section>
+
+    <section class="tracking-section section-padding">
+        <div class="container">
+            <div class="tracking-form-container" data-scrollcue="true" data-effect="fadeInUp">
+                <h2 class="text-center">Find Your Shipment</h2>
+                <p class="text-center" style="margin-bottom: var(--spacing-md); color: var(--color-secondary-dark);">Enter your Gabby Auto tracking number below:</p>
+
+                <div class="form-group">
+                    <label for="shipment-code"><i class="fas fa-barcode"></i> Tracking Number</label>
+                    <input type="text" id="shipment-code" placeholder="e.g., GABBYAUTO12345" aria-label="Tracking Number" required>
+                    <small>Enter the tracking code provided at the time of purchase.</small>
+                </div>
+                <button id="track-button" class="btn btn-primary submit-deposit-btn">
+                    <i class="fas fa-search"></i> Track Shipment
+                </button>
+
+                <div id="tracking-results" class="tracking-results" style="display: none;">
+                    <h3>Order Status for: <span id="vehicle-info"></span></h3>
+                    <div class="tracking-summary">
+                        <p><strong><i class="fas fa-truck"></i> Current Status:</strong> <span id="status-text"></span></p>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> <span id="current-location"></span></p>
+                        <p><strong><i class="fas fa-calendar-alt"></i> Estimated Delivery:</strong> <span id="estimated-delivery"></span></p>
+                    </div>
+
+                    <div class="tracking-timeline">
+                        <h4><i class="fas fa-history"></i> Shipment History:</h4>
+                        <ul id="timeline-list">
+                            </ul>
+                    </div>
+                    <p class="text-center" style="margin-top: var(--spacing-md); font-size: 0.9em; color: #888;">
+                        *All times are approximate and subject to change due to customs or unforeseen circumstances.
+                    </p>
+                </div>
+
+                <div id="tracking-message" class="message-box" style="display: none;"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Gabby Auto</h3>
+                    <p>&copy; 2025 Gabby Auto. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="showroom.html">Showroom</a></li>
+                        <li><a href="exotic-fleet.html">Exotic Fleet</a></li>
+                        <li><a href="deposit.html">Make a Deposit</a></li>
+                        <li><a href="tracking.html">Track Shipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Auto Drive, Luxury City, LC 90210</p>
+                    <p>Email: info@gabbyauto.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollcue@2.0.0/dist/scrollcue.min.js"></script>
+    <script>
+        scrollCue.init({
+            duration: 800,
+            interval: 50,
+            percentage: 0.75
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabby Auto - Showroom</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/scrollcue@2.0.0/dist/scrollcue.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Gabby Auto</a>
+            </div>
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="showroom.html" class="active">Showroom</a></li>
+                    <li><a href="exotic-fleet.html">Exotic Fleet</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="tracking.html">Tracking</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ & AI Support</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header-section showroom-header">
+        <div class="container">
+            <h1 class="page-title" data-scrollcue="true" data-effect="fadeInUp">Our Assorted Collection</h1>
+            <p class="page-subtitle" data-scrollcue="true" data-effect="fadeInUp" data-delay="100">Find your perfect vehicle from our diverse inventory of new and used cars.</p>
+        </div>
+    </section>
+
+    <section class="showroom-content section-padding">
+        <div class="container showroom-grid-container">
+            <aside class="filter-sidebar" data-scrollcue="true" data-effect="fadeInLeft">
+                <h2>Filter Vehicles</h2>
+                <div class="filter-group">
+                    <label for="make-filter">Make:</label>
+                    <select id="make-filter" aria-label="Filter by Make">
+                        <option value="">All Makes</option>
+                        </select>
+                </div>
+                <div class="filter-group">
+                    <label for="type-filter">Type:</label>
+                    <select id="type-filter" aria-label="Filter by Vehicle Type">
+                        <option value="">All Types</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Truck">Truck</option>
+                        <option value="Coupe">Coupe</option>
+                        <option value="Wagon">Wagon</option>
+                        <option value="Sports Car">Sports Car</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Minivan">Minivan</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="min-price">Min Price ($):</label>
+                    <input type="number" id="min-price" value="1000000" min="0" aria-label="Minimum Price">
+                </div>
+                <div class="filter-group">
+                    <label for="max-price">Max Price ($):</label>
+                    <input type="number" id="max-price" value="100000000" min="0" aria-label="Maximum Price">
+                </div>
+                <div class="filter-group">
+                    <label for="condition-filter">Condition:</label>
+                    <select id="condition-filter" aria-label="Filter by Condition">
+                        <option value="">Any</option>
+                        <option value="New">New</option>
+                        <option value="Used">Used</option>
+                    </select>
+                </div>
+                <button id="apply-filters" class="btn btn-primary">Apply Filters</button>
+                <button id="clear-filters" class="btn btn-secondary">Clear Filters</button>
+            </aside>
+
+            <div class="vehicle-listings">
+                <div id="car-results" class="vehicle-grid">
+                    <p class="no-results-message" style="display: none;">No vehicles match your criteria. Please adjust your filters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Gabby Auto</h3>
+                    <p>&copy; 2025 Gabby Auto. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="showroom.html">Showroom</a></li>
+                        <li><a href="exotic-fleet.html">Exotic Fleet</a></li>
+                        <li><a href="deposit.html">Make a Deposit</a></li>
+                        <li><a href="tracking.html">Track Shipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>123 Auto Drive, Luxury City, LC 90210</p>
+                    <p>Email: info@gabbyauto.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <a href="#" aria-label="Facebook"><img src="images/icons/facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="images/icons/instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="Twitter"><img src="images/icons/twitter.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollcue@2.0.0/dist/scrollcue.min.js"></script>
+    <script>
+        scrollCue.init({
+            duration: 800,
+            interval: 50,
+            percentage: 0.75,
+            disable: false
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
